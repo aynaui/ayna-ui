@@ -1,0 +1,71 @@
+{
+	"name": "ayna-ui",
+	"version": "0.0.1",
+	"description": "React component library.",
+	"main": "dist/cjs/index.js",
+	"module": "dist/esm/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "rollup -c",
+		"dev": "rollup -c -w",
+		"test": "jest --watchAll --verbose"
+	},
+	"jest": {
+		"testEnvironment": "jsdom"
+	},
+	"babel": {
+		"sourceType": "unambiguous",
+		"presets": [
+			"@babel/preset-env",
+			"@babel/preset-typescript",
+			[
+				"@babel/preset-react",
+				{
+					"runtime": "automatic"
+				}
+			]
+		]
+	},
+	"keywords": [
+		"React",
+		"Typescript",
+		"UI",
+		"Components"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ishanbagchi4/ayna-ui.git"
+	},
+	"author": {
+		"name": "Ishan Bagchi",
+		"email": "ishanbagchi4@gmail.com"
+	},
+	"license": "MIT",
+	"devDependencies": {
+		"@babel/preset-env": "^7.25.3",
+		"@babel/preset-react": "^7.24.7",
+		"@babel/preset-typescript": "^7.24.7",
+		"@rollup/plugin-commonjs": "^26.0.1",
+		"@rollup/plugin-node-resolve": "^15.2.3",
+		"@rollup/plugin-typescript": "^11.1.6",
+		"@testing-library/jest-dom": "^6.4.8",
+		"@testing-library/react": "^16.0.0",
+		"@types/jest": "^29.5.12",
+		"@types/react": "^18.3.3",
+		"jest": "^29.7.0",
+		"jest-environment-jsdom": "^29.7.0",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"rollup-plugin-dts": "^6.1.1",
+		"rollup-plugin-postcss": "^4.0.2",
+		"styled-components": "^6.1.12",
+		"tslib": "^2.6.3",
+		"typescript": "^5.5.4"
+	},
+	"peerDependencies": {
+		"react": ">=16"
+	}
+}
