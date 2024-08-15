@@ -19,4 +19,10 @@ export default [
 			'react/react-in-jsx-scope': 'off',
 		},
 	},
+	{
+		files: ['commitlint.config.js'],
+		env: {
+			node: true,
+		},
+	},
 ]
