@@ -932,7 +932,7 @@ const Container = dt.div `
 `;
 
 const Page = ({ title, children }) => {
-    return (jsxRuntime.jsxs(Container, { children: [jsxRuntime.jsx("h1", { children: title }), children] }));
+    return (jsxRuntime.jsxs(Container, { "data-testid": "page-container", children: [jsxRuntime.jsx("h1", { children: title }), children] }));
 };
 
 exports.Page = Page;

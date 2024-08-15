@@ -930,7 +930,7 @@ const Container = dt.div `
 `;
 
 const Page = ({ title, children }) => {
-    return (jsxs(Container, { children: [jsx("h1", { children: title }), children] }));
+    return (jsxs(Container, { "data-testid": "page-container", children: [jsx("h1", { children: title }), children] }));
 };
 
 export { Page };
