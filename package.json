@@ -51,6 +51,10 @@
 		"email": "ishanbagchi4@gmail.com"
 	},
 	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/aynaui/ayna-ui/issues"
+	},
+	"homepage": "https://github.com/aynaui/ayna-ui#readme",
 	"devDependencies": {
 		"@babel/preset-env": "^7.25.3",
 		"@babel/preset-react": "^7.24.7",
