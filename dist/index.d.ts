@@ -7,4 +7,11 @@ interface PageProps {
 
 declare const Page: React$1.FC<PageProps>;
 
-export { Page };
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+    children: React.ReactNode;
+    size?: 'small' | 'medium' | 'large';
+}
+
+declare const Button: React$1.FC<ButtonProps>;
+
+export { Button, Page };
