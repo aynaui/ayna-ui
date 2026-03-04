@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/aynaui/ayna-ui/compare/v0.1.1...v0.1.2) (2026-03-04)
+
+
+### Features
+
+* improve doccumentation and button styles ([7a95f66](https://github.com/aynaui/ayna-ui/commit/7a95f663f0db22480c3f8deedcc704ca76f6aa89))
+
 ### 0.1.1 (2026-03-04)
 
 
