@@ -1,0 +1,162 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Documentation/Introduction" />
+
+# Ayna UI
+
+<div style={{ 
+  padding: '32px', 
+  border: '2px solid #000', 
+  boxShadow: '-4px 4px 0px 0px #000',
+  backgroundColor: '#fff',
+  marginBottom: '32px'
+}}>
+  <h2 style={{ fontFamily: 'Source Code Pro, monospace', marginTop: 0 }}>
+    A brutalist React component library
+  </h2>
+  <p style={{ fontFamily: 'Source Code Pro, monospace', fontSize: '14px' }}>
+    Bold. Direct. Unapologetic design.
+  </p>
+</div>
+
+## What is Ayna UI?
+
+**Ayna UI** is a modern React component library that embraces brutalist/neobrutalist design principles. Built with TypeScript and styled-components, it provides a collection of highly accessible, keyboard-navigable components with a distinctive visual style.
+
+## Key Features
+
+### 🎨 Distinctive Design
+- **2px solid borders** everywhere
+- **Sharp box shadows** (-4px 4px pattern)
+- **Source Code Pro** monospace typography
+- **High contrast** black & white with semantic colors
+- **No gradients** - flat, honest visuals
+
+### ⚡ Modern Stack
+- **React 18+** with hooks
+- **TypeScript** with strict mode
+- **styled-components** for styling
+- **Full type safety** with IntelliSense support
+
+### ♿ Accessibility First
+- **ARIA attributes** on all interactive elements
+- **Keyboard navigation** support
+- **Focus management** for modals and dropdowns
+- **Screen reader** friendly
+
+### 🧩 Component Library
+
+**15 Production-Ready Components:**
+
+| Category | Components |
+|----------|-----------|
+| **Forms** | Button, Input, Select, Checkbox |
+| **Feedback** | Alert, Toast, Spinner, Tooltip |
+| **Layout** | Card, Modal, Page, Dropdown |
+| **Display** | Badge, Avatar, ToastContainer |
+
+### 📱 Responsive & Smart
+- **Viewport-aware positioning** - Dropdowns and selects detect screen edges
+- **Flexible layouts** - Components adapt to container sizes
+- **Mobile-friendly** - Touch-optimized interactions
+
+## Design Principles
+
+### 1. Brutalism
+No hiding behind subtlety. Every element is bold, bordered, and shadowed. What you see is exactly what you get.
+
+### 2. Function Over Form
+Components prioritize usability and accessibility. Beauty emerges from honest functionality.
+
+### 3. Consistency
+Every component follows the same design language:
+- 2px borders
+- -4px 4px shadows
+- Source Code Pro font
+- Semantic color system
+
+### 4. No Magic
+Predictable behavior. Clear props. Obvious interactions. Zero surprises.
+
+## Component Philosophy
+
+### Controlled Components
+Most components support controlled mode for maximum flexibility:
+
+```jsx
+// Controlled input
+<Input value={text} onChange={setText} />
+
+// Controlled select
+<Select value={country} onChange={setCountry} />
+
+// Controlled modal
+<Modal isOpen={open} onClose={() => setOpen(false)} />
+```
+
+### Semantic Variants
+Components use semantic naming for variants:
+
+```jsx
+<Button variant="primary">   // Main actions
+<Button variant="success">   // Positive actions
+<Button variant="danger">    // Destructive actions
+<Button variant="warning">   // Cautious actions
+<Button variant="secondary"> // Less emphasis
+```
+
+### Composition Over Configuration
+Build complex UIs by composing simple components:
+
+```jsx
+<Card>
+  <Card.Header>
+    <h3>User Profile</h3>
+  </Card.Header>
+  <Card.Body>
+    <Avatar src={user.avatar} />
+    <Badge variant="success">Active</Badge>
+  </Card.Body>
+</Card>
+```
+
+## Browser Support
+
+- Chrome/Edge (last 2 versions)
+- Firefox (last 2 versions)
+- Safari (last 2 versions)
+- iOS Safari (last 2 versions)
+- Chrome Android (last 2 versions)
+
+## Performance
+
+- **Tree-shakeable** - Only import what you use
+- **No runtime CSS** - Styles compile at build time
+- **Minimal bundle** - ~27KB gzipped (with all components)
+- **Fast renders** - Optimized styled-components
+
+## Community
+
+- **GitHub**: [aynaui/ayna-ui](https://github.com/aynaui/ayna-ui)
+- **NPM**: [ayna-ui](https://www.npmjs.com/package/ayna-ui)
+- **Storybook**: [Live Demos](https://ayna-ui.vercel.app)
+
+## Contributing
+
+We welcome contributions! Check out our [GitHub repository](https://github.com/aynaui/ayna-ui) to:
+- Report bugs
+- Request features
+- Submit pull requests
+- Improve documentation
+
+## Credits
+
+Created by [Ishan Bagchi](https://github.com/aynaui)
+
+## Next Steps
+
+👉 **[Getting Started](/?path=/docs/documentation-getting-started)** - Install and use Ayna UI
+
+👉 **Explore Components** - Browse the component library in the sidebar
+
+👉 **[GitHub Repo](https://github.com/aynaui/ayna-ui)** - Star us on GitHub!
