@@ -1,7 +1,7 @@
 {
 	"name": "ayna-ui",
 	"version": "0.1.2",
-	"description": "React component library.",
+	"description": "A brutalist React component library with bold borders and shadows.",
 	"main": "dist/cjs/index.js",
 	"module": "dist/esm/index.js",
 	"types": "dist/index.d.ts",
@@ -55,7 +55,7 @@
 	"bugs": {
 		"url": "https://github.com/aynaui/ayna-ui/issues"
 	},
-	"homepage": "https://github.com/aynaui/ayna-ui#readme",
+	"homepage": "https://ayna-ui.ishanbagchi.com/",
 	"devDependencies": {
 		"@babel/preset-env": "^7.25.3",
 		"@babel/preset-react": "^7.24.7",

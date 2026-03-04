@@ -12,7 +12,7 @@ export const CheckboxContainer = styled.label`
 	color: #000;
 
 	&:hover .checkbox-visual {
-		box-shadow: -5px 5px 0px 0px #000;
+		box-shadow: -5px 5px 0px 0px currentColor;
 		transform: translate(1px, -1px);
 	}
 `
@@ -32,10 +32,11 @@ export const CheckboxVisual = styled.span<{ checked?: boolean }>`
 	align-items: center;
 	width: 20px;
 	height: 20px;
-	border: 2px solid #000;
-	background: ${({ checked }) => (checked ? '#000' : '#fff')};
-	box-shadow: -3px 3px 0px 0px #000;
-	transition: all 0.2s ease;
+	border: 2px solid ${({ checked }) => (checked ? '#1e40af' : '#000')};
+	background: ${({ checked }) => (checked ? '#3b82f6' : '#fff')};
+	box-shadow: -3px 3px 0px 0px
+		${({ checked }) => (checked ? '#1e40af' : '#000')};
+	transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 
 	&::after {
 		content: '';
@@ -54,7 +55,8 @@ export const CheckboxVisual = styled.span<{ checked?: boolean }>`
 	}
 
 	${HiddenCheckbox}:focus ~ & {
-		box-shadow: -5px 5px 0px 0px #000;
+		box-shadow: -5px 5px 0px 0px
+			${({ checked }) => (checked ? '#1e40af' : '#000')};
 	}
 `
 
