@@ -1,0 +1,15 @@
+import type { Meta, StoryObj } from '@storybook/react';
+import Select from './Select';
+declare const meta: Meta<typeof Select>;
+export default meta;
+type Story = StoryObj<typeof Select>;
+export declare const Default: Story;
+export declare const WithValue: Story;
+export declare const Disabled: Story;
+export declare const Error: Story;
+export declare const FullWidth: Story;
+export declare const Countries: Story;
+export declare const WithDisabledOptions: Story;
+export declare const Interactive: Story;
+export declare const Form: Story;
+export declare const BottomOfViewport: Story;

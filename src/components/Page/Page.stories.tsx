@@ -1,7 +1,7 @@
 import Page from './Page'
 
 export default {
-	title: 'MyComponents/Page',
+	title: 'Components/Page',
 	component: Page,
 	parameters: {
 		layout: 'centered',

@@ -60,4 +60,50 @@ describe(Button.name, () => {
       font-size: 14px;
     `)
 	})
+
+	it('applies primary variant styling', () => {
+		// Arrange
+		const buttonText = 'Primary'
+		const { getByText } = render(
+			<Button variant="primary">{buttonText}</Button>,
+		)
+
+		// Act
+		const buttonElement = getByText(buttonText)
+
+		// Assert
+		expect(buttonElement).toHaveStyle(`
+      background: #000;
+      color: #fff;
+    `)
+	})
+
+	it('applies danger variant styling', () => {
+		// Arrange
+		const buttonText = 'Danger'
+		const { getByText } = render(
+			<Button variant="danger">{buttonText}</Button>,
+		)
+
+		// Act
+		const buttonElement = getByText(buttonText)
+
+		// Assert
+		expect(buttonElement).toHaveStyle(`
+      background: #dc2626;
+      color: #fff;
+    `)
+	})
+
+	it('disables button when disabled prop is true', () => {
+		// Arrange
+		const buttonText = 'Disabled'
+		const { getByText } = render(<Button disabled>{buttonText}</Button>)
+
+		// Act
+		const buttonElement = getByText(buttonText)
+
+		// Assert
+		expect(buttonElement).toBeDisabled()
+	})
 })

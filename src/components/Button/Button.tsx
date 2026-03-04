@@ -5,14 +5,13 @@ import { ButtonComponent } from './Button.styled'
 const Button: React.FC<ButtonProps> = ({
 	children,
 	size = 'medium',
+	variant = 'secondary',
 	...props
 }) => {
 	return (
-		<div>
-			<ButtonComponent size={size} {...props}>
-				{children}
-			</ButtonComponent>
-		</div>
+		<ButtonComponent size={size} variant={variant} {...props}>
+			{children}
+		</ButtonComponent>
 	)
 }
 

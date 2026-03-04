@@ -1,0 +1,14 @@
+import type { Meta, StoryObj } from '@storybook/react';
+import Input from './Input';
+declare const meta: Meta<typeof Input>;
+export default meta;
+type Story = StoryObj<typeof Input>;
+export declare const Default: Story;
+export declare const Filled: Story;
+export declare const Flushed: Story;
+export declare const WithValue: Story;
+export declare const Error: Story;
+export declare const ErrorFilled: Story;
+export declare const ErrorFlushed: Story;
+export declare const Disabled: Story;
+export declare const FullWidth: Story;
