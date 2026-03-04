@@ -61,7 +61,7 @@ jobs:
                       NPM_TOKEN: $NPM_TOKEN
 
 workflows:
-    build_app:
+    build_and_test:
         jobs:
             - lint_code
             - run_tests:
@@ -70,9 +70,36 @@ workflows:
             - build:
                   requires:
                       - run_tests
-            - run_release:
+
+    release_and_publish:
+        jobs:
+            - lint_code:
+                  filters:
+                      tags:
+                          only: /^v.*/
+                      branches:
+                          ignore: /.*/
+            - run_tests:
                   requires:
-                      - build
+                      - lint_code
+                  filters:
+                      tags:
+                          only: /^v.*/
+                      branches:
+                          ignore: /.*/
+            - build:
+                  requires:
+                      - run_tests
+                  filters:
+                      tags:
+                          only: /^v.*/
+                      branches:
+                          ignore: /.*/
             - publish_to_npm:
                   requires:
-                      - run_release
+                      - build
+                  filters:
+                      tags:
+                          only: /^v.*/
+                      branches:
+                          ignore: /.*/
