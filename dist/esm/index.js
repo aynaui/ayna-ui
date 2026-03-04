@@ -1543,7 +1543,7 @@ const Dropdown = ({ trigger, items, position = 'bottom-left', disabled = false, 
             setIsOpen(false);
         }
     };
-    return (jsxs(DropdownWrapper, { ref: wrapperRef, children: [jsx(DropdownTrigger, { onClick: handleToggle, disabled: disabled, children: trigger }), jsx(DropdownMenu, { isOpen: isOpen, position: position, role: "menu", children: items.map((item, index) => (jsxs(r.Fragment, { children: [jsxs(DropdownItem, { onClick: () => handleItemClick(item), disabled: item.disabled, role: "menuitem", "aria-disabled": item.disabled, children: [item.icon && jsx(DropdownIcon, { children: item.icon }), item.label] }), item.divider && index < items.length - 1 && jsx(DropdownDivider, {})] }, item.id))) })] }));
+    return (jsxs(DropdownWrapper, { ref: wrapperRef, children: [jsx(DropdownTrigger, { onClick: handleToggle, disabled: disabled, children: trigger }), jsx(DropdownMenu, { isOpen: isOpen, position: position, role: "menu", children: items.map((item, index) => (jsxs(r.Fragment, { children: [jsxs(DropdownItem, { onClick: () => handleItemClick(item), disabled: item.disabled, role: "menuitem", "aria-disabled": item.disabled, children: [item.icon && (jsx(DropdownIcon, { children: item.icon })), item.label] }), item.divider && index < items.length - 1 && (jsx(DropdownDivider, {}))] }, item.id))) })] }));
 };
 
 const inputVariants = {
@@ -1891,7 +1891,8 @@ const SelectArrow = dt.div `
 	position: absolute;
 	right: 16px;
 	top: 50%;
-	transform: translateY(-50%) ${({ isOpen }) => (isOpen ? 'rotate(180deg)' : 'rotate(0)')};
+	transform: translateY(-50%)
+		${({ isOpen }) => (isOpen ? 'rotate(180deg)' : 'rotate(0)')};
 	width: 0;
 	height: 0;
 	border-left: 6px solid transparent;
@@ -1906,11 +1907,11 @@ const SelectDropdown = dt.div `
     ? lt `
 					bottom: 100%;
 					margin-bottom: 8px;
-			  `
+				`
     : lt `
 					top: 100%;
 					margin-top: 8px;
-			  `}
+				`}
 	left: 0;
 	right: 0;
 	background: #fff;
@@ -1921,7 +1922,8 @@ const SelectDropdown = dt.div `
 	overflow-y: auto;
 	z-index: 100;
 	display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
-	animation: ${({ openUpward }) => (openUpward ? slideUp : slideDown)} 0.2s ease;
+	animation: ${({ openUpward }) => (openUpward ? slideUp : slideDown)} 0.2s
+		ease;
 `;
 const SelectOption = dt.div `
 	padding: 12px 16px;
@@ -2195,7 +2197,8 @@ const ToastElement = dt.div `
 	padding: 16px 20px;
 	border: 2px solid ${({ variant }) => toastVariants[variant].border};
 	background: ${({ variant }) => toastVariants[variant].background};
-	box-shadow: -4px 4px 0px 0px ${({ variant }) => toastVariants[variant].shadow};
+	box-shadow: -4px 4px 0px 0px
+		${({ variant }) => toastVariants[variant].shadow};
 	font-family: 'Source Code Pro', monospace;
 	font-size: 14px;
 	font-weight: 500;
@@ -2363,7 +2366,9 @@ const TooltipContent = dt.div `
 	opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
 	visibility: ${({ isVisible }) => (isVisible ? 'visible' : 'hidden')};
 	animation: ${({ isVisible }) => (isVisible ? fadeIn : 'none')} 0.2s ease;
-	transition: opacity 0.2s ease, visibility 0.2s ease;
+	transition:
+		opacity 0.2s ease,
+		visibility 0.2s ease;
 
 	${({ position }) => getPositionStyles(position)}
 
