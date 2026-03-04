@@ -17,17 +17,17 @@ const buttonSizes = {
 
 const buttonVariants = {
 	primary: css`
-		background: #000;
+		background: #3b82f6;
 		color: #fff;
-		border-color: #000;
-		box-shadow: -4px 4px 0px 0px #000;
+		border-color: #1e40af;
+		box-shadow: -4px 4px 0px 0px #1e40af;
 
 		&:hover {
-			box-shadow: -6px 6px 0px 0px #000;
+			box-shadow: -6px 6px 0px 0px #1e40af;
 		}
 
 		&:active {
-			box-shadow: -2px 2px 0px 0px #000;
+			box-shadow: -2px 2px 0px 0px #1e40af;
 		}
 	`,
 	secondary: css`
@@ -51,8 +51,6 @@ const buttonVariants = {
 		box-shadow: -4px 4px 0px 0px #000;
 
 		&:hover {
-			background: #000;
-			color: #fff;
 			box-shadow: -6px 6px 0px 0px #000;
 		}
 
@@ -61,7 +59,7 @@ const buttonVariants = {
 		}
 	`,
 	danger: css`
-		background: #dc2626;
+		background: #ef4444;
 		color: #fff;
 		border-color: #991b1b;
 		box-shadow: -4px 4px 0px 0px #991b1b;
@@ -75,7 +73,7 @@ const buttonVariants = {
 		}
 	`,
 	success: css`
-		background: #16a34a;
+		background: #22c55e;
 		color: #fff;
 		border-color: #166534;
 		box-shadow: -4px 4px 0px 0px #166534;
@@ -90,10 +88,12 @@ const buttonVariants = {
 	`,
 }
 
-export const ButtonComponent = styled.button<{
-	size?: 'small' | 'medium' | 'large'
-	variant?: 'primary' | 'secondary' | 'outline' | 'danger' | 'success'
-}>`
+interface ButtonStyledProps {
+	$size?: 'small' | 'medium' | 'large'
+	$variant?: 'primary' | 'secondary' | 'outline' | 'danger' | 'success'
+}
+
+export const ButtonComponent = styled.button<ButtonStyledProps>`
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -102,15 +102,15 @@ export const ButtonComponent = styled.button<{
 	align-self: stretch;
 	border: 2px solid #000;
 	cursor: pointer;
-	transition: all 0.2s ease;
+	transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 
 	font-family: 'Source Code Pro', monospace;
 	font-style: normal;
 	font-weight: 600;
 	line-height: 100%;
 
-	${({ size = 'medium' }) => buttonSizes[size]};
-	${({ variant = 'secondary' }) => buttonVariants[variant]};
+	${({ $size = 'medium' }) => buttonSizes[$size]};
+	${({ $variant = 'secondary' }) => buttonVariants[$variant]};
 
 	&:hover {
 		transform: translate(2px, -2px);
@@ -127,6 +127,7 @@ export const ButtonComponent = styled.button<{
 
 		&:hover {
 			transform: none;
+			box-shadow: -4px 4px 0px 0px;
 		}
 	}
 `

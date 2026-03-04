@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/blocks';
+import { Meta } from '@storybook/blocks'
 
 <Meta title="Documentation/Getting Started" />
 
@@ -27,15 +27,15 @@ yarn add ayna-ui styled-components
 Import components from the package:
 
 ```jsx
-import { Button, Input, Modal, Select } from 'ayna-ui';
+import { Button, Input, Modal, Select } from 'ayna-ui'
 
 function App() {
-  return (
-    <div>
-      <Button variant="primary">Click me</Button>
-      <Input placeholder="Enter text..." />
-    </div>
-  );
+	return (
+		<div>
+			<Button variant="primary">Click me</Button>
+			<Input placeholder="Enter text..." />
+		</div>
+	)
 }
 ```
 
@@ -43,35 +43,39 @@ function App() {
 
 Ayna UI embraces **brutalist/neobrutalist design** principles:
 
-- **Bold borders**: 2px solid black borders on all interactive elements
-- **Sharp shadows**: `-4px 4px` box shadows for depth
-- **Monospace typography**: Source Code Pro font family
-- **High contrast**: Black and white with semantic color accents
-- **No subtle gradients**: Flat, honest, and direct visual language
+-   **Bold borders**: 2px solid black borders on all interactive elements
+-   **Sharp shadows**: `-4px 4px` box shadows for depth
+-   **Monospace typography**: Source Code Pro font family
+-   **High contrast**: Black and white with semantic color accents
+-   **No subtle gradients**: Flat, honest, and direct visual language
 
 ## 🧩 Available Components
 
 ### Form Components
-- **Button** - Primary, secondary, success, danger, and warning variants
-- **Input** - Text inputs with label, error, and full-width support
-- **Select** - Custom dropdown with viewport-aware positioning
-- **Checkbox** - Styled checkboxes with labels
+
+-   **Button** - Primary, secondary, success, danger, and warning variants
+-   **Input** - Text inputs with label, error, and full-width support
+-   **Select** - Custom dropdown with viewport-aware positioning
+-   **Checkbox** - Styled checkboxes with labels
 
 ### Feedback Components
-- **Alert** - Dismissible alerts with 4 semantic variants
-- **Toast** - Auto-dismissing notifications with 6 positions
-- **Spinner** - Loading indicator with size variants
-- **Tooltip** - Hover-activated contextual help
+
+-   **Alert** - Dismissible alerts with 4 semantic variants
+-   **Toast** - Auto-dismissing notifications with 6 positions
+-   **Spinner** - Loading indicator with size variants
+-   **Tooltip** - Hover-activated contextual help
 
 ### Layout Components
-- **Card** - Content containers with optional headers and footers
-- **Modal** - Dialogs with 3 size options and backdrop control
-- **Page** - Full page layout wrapper
+
+-   **Card** - Content containers with optional headers and footers
+-   **Modal** - Dialogs with 3 size options and backdrop control
+-   **Page** - Full page layout wrapper
 
 ### Data Display
-- **Badge** - Status indicators with semantic colors
-- **Avatar** - User avatars with initials or images
-- **Dropdown** - Action menus with icons and dividers
+
+-   **Badge** - Status indicators with semantic colors
+-   **Avatar** - User avatars with initials or images
+-   **Dropdown** - Action menus with icons and dividers
 
 ## 💡 Quick Examples
 
@@ -89,106 +93,108 @@ import { Button } from 'ayna-ui';
 ### Form with Input and Select
 
 ```jsx
-import { Input, Select, Button } from 'ayna-ui';
+import { Input, Select, Button } from 'ayna-ui'
 
 function Form() {
-  const [name, setName] = useState('');
-  const [country, setCountry] = useState('');
+	const [name, setName] = useState('')
+	const [country, setCountry] = useState('')
 
-  const options = [
-    { value: 'us', label: 'United States' },
-    { value: 'uk', label: 'United Kingdom' },
-    { value: 'ca', label: 'Canada' },
-  ];
+	const options = [
+		{ value: 'us', label: 'United States' },
+		{ value: 'uk', label: 'United Kingdom' },
+		{ value: 'ca', label: 'Canada' },
+	]
 
-  return (
-    <form>
-      <Input
-        label="Name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        placeholder="Enter your name"
-      />
-      
-      <Select
-        label="Country"
-        options={options}
-        value={country}
-        onChange={setCountry}
-        placeholder="Select country"
-      />
-      
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
-    </form>
-  );
+	return (
+		<form>
+			<Input
+				label="Name"
+				value={name}
+				onChange={(e) => setName(e.target.value)}
+				placeholder="Enter your name"
+			/>
+
+			<Select
+				label="Country"
+				options={options}
+				value={country}
+				onChange={setCountry}
+				placeholder="Select country"
+			/>
+
+			<Button variant="primary" type="submit">
+				Submit
+			</Button>
+		</form>
+	)
 }
 ```
 
 ### Modal Dialog
 
 ```jsx
-import { Modal, Button } from 'ayna-ui';
-import { useState } from 'react';
+import { Modal, Button } from 'ayna-ui'
+import { useState } from 'react'
 
 function ModalExample() {
-  const [isOpen, setIsOpen] = useState(false);
+	const [isOpen, setIsOpen] = useState(false)
 
-  return (
-    <>
-      <Button onClick={() => setIsOpen(true)}>
-        Open Modal
-      </Button>
-      
-      <Modal
-        isOpen={isOpen}
-        onClose={() => setIsOpen(false)}
-        title="Confirm Action"
-        footer={
-          <>
-            <Button variant="secondary" onClick={() => setIsOpen(false)}>
-              Cancel
-            </Button>
-            <Button variant="primary" onClick={() => setIsOpen(false)}>
-              Confirm
-            </Button>
-          </>
-        }
-      >
-        <p>Are you sure you want to proceed?</p>
-      </Modal>
-    </>
-  );
+	return (
+		<>
+			<Button onClick={() => setIsOpen(true)}>Open Modal</Button>
+
+			<Modal
+				isOpen={isOpen}
+				onClose={() => setIsOpen(false)}
+				title="Confirm Action"
+				footer={
+					<>
+						<Button
+							variant="secondary"
+							onClick={() => setIsOpen(false)}
+						>
+							Cancel
+						</Button>
+						<Button
+							variant="primary"
+							onClick={() => setIsOpen(false)}
+						>
+							Confirm
+						</Button>
+					</>
+				}
+			>
+				<p>Are you sure you want to proceed?</p>
+			</Modal>
+		</>
+	)
 }
 ```
 
 ### Toast Notifications
 
 ```jsx
-import { Toast, ToastContainer } from 'ayna-ui';
-import { useState } from 'react';
+import { Toast, ToastContainer } from 'ayna-ui'
+import { useState } from 'react'
 
 function ToastExample() {
-  const [showToast, setShowToast] = useState(false);
+	const [showToast, setShowToast] = useState(false)
 
-  return (
-    <>
-      <Button onClick={() => setShowToast(true)}>
-        Show Toast
-      </Button>
-      
-      <ToastContainer position="top-right">
-        <Toast
-          message="Operation successful!"
-          variant="success"
-          isVisible={showToast}
-          onClose={() => setShowToast(false)}
-          duration={5000}
-        />
-      </ToastContainer>
-    </>
-  );
+	return (
+		<>
+			<Button onClick={() => setShowToast(true)}>Show Toast</Button>
+
+			<ToastContainer position="top-right">
+				<Toast
+					message="Operation successful!"
+					variant="success"
+					isVisible={showToast}
+					onClose={() => setShowToast(false)}
+					duration={5000}
+				/>
+			</ToastContainer>
+		</>
+	)
 }
 ```
 
@@ -197,31 +203,32 @@ function ToastExample() {
 All components are built with TypeScript and include full type definitions:
 
 ```tsx
-import { ButtonProps, InputProps, ModalProps } from 'ayna-ui';
+import { ButtonProps, InputProps, ModalProps } from 'ayna-ui'
 
 // Component props are fully typed
 const MyButton: React.FC<ButtonProps> = (props) => {
-  return <Button {...props} />;
-};
+	return <Button {...props} />
+}
 ```
 
 ## 🔧 Component Props
 
 Each component comes with comprehensive props for customization:
 
-- **Common props**: `className`, `style`, `disabled`, etc.
-- **Variant props**: `variant`, `size`, `color` for visual variations
-- **Callback props**: `onClick`, `onChange`, `onClose` for interactions
-- **State props**: `isOpen`, `isVisible`, `isSelected` for controlled components
+-   **Common props**: `className`, `style`, `disabled`, etc.
+-   **Variant props**: `variant`, `size`, `color` for visual variations
+-   **Callback props**: `onClick`, `onChange`, `onClose` for interactions
+-   **State props**: `isOpen`, `isVisible`, `isSelected` for controlled components
 
 Explore individual component documentation for detailed prop information.
 
 ## 📚 Component Documentation
 
 Use the sidebar navigation to explore:
-- **Component stories** - Interactive examples
-- **Props tables** - Complete API reference
-- **Code snippets** - Copy-paste examples
+
+-   **Component stories** - Interactive examples
+-   **Props tables** - Complete API reference
+-   **Code snippets** - Copy-paste examples
 
 ## 🌐 Live Storybook
 

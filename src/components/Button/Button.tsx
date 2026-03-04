@@ -9,7 +9,7 @@ const Button: React.FC<ButtonProps> = ({
 	...props
 }) => {
 	return (
-		<ButtonComponent size={size} variant={variant} {...props}>
+		<ButtonComponent $size={size} $variant={variant} {...props}>
 			{children}
 		</ButtonComponent>
 	)

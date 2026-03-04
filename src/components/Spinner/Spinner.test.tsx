@@ -48,8 +48,8 @@ describe(Spinner.name, () => {
 
 		// Assert
 		expect(spinnerElement).toHaveStyle(`
-      width: 20px;
-      height: 20px;
+      display: flex;
+      gap: 4px;
     `)
 	})
 
@@ -62,8 +62,8 @@ describe(Spinner.name, () => {
 
 		// Assert
 		expect(spinnerElement).toHaveStyle(`
-      width: 32px;
-      height: 32px;
+      display: flex;
+      gap: 6px;
     `)
 	})
 
@@ -76,8 +76,8 @@ describe(Spinner.name, () => {
 
 		// Assert
 		expect(spinnerElement).toHaveStyle(`
-      width: 48px;
-      height: 48px;
+      display: flex;
+      gap: 8px;
     `)
 	})
 })

@@ -73,7 +73,7 @@ describe(Button.name, () => {
 
 		// Assert
 		expect(buttonElement).toHaveStyle(`
-      background: #000;
+      background: #3b82f6;
       color: #fff;
     `)
 	})
@@ -90,7 +90,7 @@ describe(Button.name, () => {
 
 		// Assert
 		expect(buttonElement).toHaveStyle(`
-      background: #dc2626;
+      background: #ef4444;
       color: #fff;
     `)
 	})
